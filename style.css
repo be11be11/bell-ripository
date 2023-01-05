@@ -1,22 +1,62 @@
 @charset "UTF-8";
+/* reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+/* main contents */
 body{
- background-image: url(DSC01833.JPG);
- background-size:cover; 
- 
- margin-left: 130px;
- font-size:20px;
- line-height:40px;
-
-#box1 {
-font-size:27px;
-line-height:23px;
-	width: 400px;
-	height: 200px;
-    padding: 40px;
-    margin-bottom: 200px;
-    margin-left: 150px;
-	float: left;
+  background-color: rgb(230, 230, 230);
+}
+.wrapper{
+  background-color: white;
+  width: 640px;
+  margin: 0 auto;
+  /* 子要素を横並びにする */
+  display: flex;
+  /* ボックスを中央に均等に配置する */
+  justify-content: space-around;
+  /* .boxが幅の端まで来たら折り返し */
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* モバイルファーストの場合 */
+  width: 320px;
+}
+/* モバイルファーストにすると */
+@media screen and (min-width: 768px) and (max-width: 991.9px){
+  /* 768~991.9pxまで */
+  .wrapper{
+    width: 640px;
+  }
+}
+@media screen and (min-width: 992px){
+  /* 992以上 */
+  .wrapper{
+    width: 960px;
+  }
+}
+/* .boxの共通CSS */
+.box{
+  /* box本体のCSS */
+  width: 300px;
+  height: 200px;
+  
+  background-color: pink;
+  /* 文字色、配置位置設定 */
+  line-height: px;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  /* boxどうしの間隔を開ける */
+  margin: 10px;
 }
 
-
-}
